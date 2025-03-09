@@ -140,7 +140,6 @@ def main(
     
     # load and process the code datasets
     ds = load_dataset("MatrixStudio/Codeforces-Python-Submissions", split="train", cache_dir=cache_dir)
-    ds = ds.take(10)
     ds = cps_process(ds, num_proc=num_proc)
 
     # rename columns for reason
