@@ -1,0 +1,1 @@
+from ..puzzle.puzzle import main as puzzle_main
