@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/SmallThoughts.png" alt="samllthoughts" width="100%">
+  <img src="./assets/SmallThoughts.png" alt="samllthoughts" width="60%">
 </div>
 
 <hr>
@@ -72,6 +72,12 @@ python src/small_thoughts/generation.py \
 ```
 
 Then follow the instructions in the terminal.
+
+You can get the following dataset under your huggingface repository by running with the `--try_run` parameter.
+
+![example](./assets/example.png)
+
+If you need the complete distilled dataset, please remove the `--try_run` parameter.
 
 
 # Citation

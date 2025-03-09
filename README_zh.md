@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/SmallThoughts.png" alt="samllthoughts" width="100%">
+  <img src="./assets/SmallThoughts.png" alt="samllthoughts" width="60%">
 </div>
 
 <hr>
@@ -73,6 +73,11 @@ python src/small_thoughts/generation.py \
 
 然后跟随终端中的指引操作即可.
 
+使用 `--try_run` 参数运行, 您可以在您的huggingface仓库下面得到以下数据集.
+
+![example](./assets/example.png)
+
+如果您需要完整的蒸馏数据集, 请移除 `--try_run` 参数.
 
 # 引用
 
