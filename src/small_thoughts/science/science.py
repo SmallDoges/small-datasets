@@ -58,9 +58,9 @@ def main(
     ds = ds.select_columns(["question", "answer", "domain", "topic", "sub_topic"])
     ds = ds.add_column("source", ["camel"] * len(ds))
 
-    # # clean the dataset
-    # ds = deduplicate(ds, num_proc=num_proc)
-    # ds = decontaminate(ds, cache_dir=cache_dir, num_proc=num_proc)
+    # clean the dataset
+    ds = deduplicate(ds, num_proc=num_proc)
+    ds = decontaminate(ds, cache_dir=cache_dir, num_proc=num_proc)
 
     # generate reasoning
     ds = reason(
