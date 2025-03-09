@@ -34,17 +34,16 @@ def main(
     # load and process the riddle_sense dataset
     ds = load_dataset("INK-USC/riddle_sense", split="train", trust_remote_code=True, cache_dir=cache_dir)
     ds = ds.map(riddle_sense_map)
-
-    # if try_run, only take 2 samples
-    if try_run:
-        ds = ds.take(2)
-    else:
-        ds = ds.shuffle(seed=42).take(2_000)
+    ds = ds.shuffle(seed=42).take(2_000) 
 
     # rename columns for reason
     ds = ds.remove_columns(["answerKey", "choices"])
     ds = ds.add_column("domain", ["puzzle"] * len(ds))
     ds = ds.add_column("source", ["riddle_sense"] * len(ds))
+
+    # if try_run, only take 2 samples
+    if try_run:
+        ds = ds.take(2)
 
     # clean the dataset
     ds = deduplicate(ds, num_proc=num_proc)

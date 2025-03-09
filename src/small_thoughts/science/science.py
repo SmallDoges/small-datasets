@@ -47,16 +47,16 @@ def main(
         domains[domain] = ds
     ds: Dataset = concatenate_datasets(domains.values())
 
-    # if try_run, only take 2 samples
-    if try_run:
-        ds = ds.take(2)
-
     # rename columns for reason
     ds = ds.rename_column("message_1", "question")
     ds = ds.rename_column("message_2", "answer")
     ds = ds.rename_column("topic;", "topic")
     ds = ds.select_columns(["question", "answer", "domain", "topic", "sub_topic"])
     ds = ds.add_column("source", ["camel"] * len(ds))
+
+    # if try_run, only take 2 samples
+    if try_run:
+        ds = ds.take(2)
 
     # clean the dataset
     ds = deduplicate(ds, num_proc=num_proc)
