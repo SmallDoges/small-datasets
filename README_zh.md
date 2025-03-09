@@ -10,43 +10,43 @@
 [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-FFD21E)](https://huggingface.co/datasets/SmallDoge/SmallThoughts)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
-*Small Thoughts, Big Progress!*
+*小心思, 大进步!*
 
 ---
 
-*Our goal is to build pipelines for distilling more precise and concise datasets from large reasoning models*
+*我们的目标是构建从大型推理模型中蒸馏出更精确更简洁数据集的流水线*
 
 <h4>
 
-English | [简体中文](./README_zh.md)
+简体中文 | [English](./README.md)
 
 </h4>
 
 </div>
 
 
-# News
+# 新闻
 
-* **[2025-3-8]** 🎉Released [SmallThoughts](https://huggingface.co/datasets/SmallDoge/SmallThoughts) dataset.
-
-
-# About
-
-The goal of this project is to build pipelines for distilling more precise and concise datasets from large reasoning models to address the problem that the existing reasoning trajectories are generally 32k sequence length, resulting in high costs when performing SFT and GRPO fine-tuning.
+* **[2025-3-8]** 🎉发布了 [SmallThoughts](https://huggingface.co/datasets/SmallDoge/SmallThoughts) 数据集.
 
 
-# Requirements
+# 关于
+
+本项目旨在构建从大型推理模型中蒸馏出更精确更简洁数据集的流水线, 来应对现有的推理轨迹普遍在 32k 序列长度, 导致进行 SFT 和 GRPO 微调时的成本过高的问题.
+
+
+# 要求
 
 - Python >= 3.10
-- Linux operating system
+- Linux 操作系统
 - DeepSeek API Key
 - Hugging Face API Key
 
 > [!TIP]
-> If you are a Windows user, you can use WSL2 to create an Ubuntu subsystem to run Linux commands on Windows.
+> 如果您是 Windows 用户, 可以使用 WSL2 创建一个 Ubuntu 子系统, 以便在 Windows 上运行 Linux 命令.
 
 
-# Installation
+# 安装
 
 ```bash
 git clone https://github.com/SmallDoges/small-thoughts.git
@@ -55,7 +55,7 @@ pip install .
 ```
 
 
-# Usage
+# 使用
 
 ```bash
 python src/small_thoughts/generation.py \
@@ -64,19 +64,19 @@ python src/small_thoughts/generation.py \
 --model_name deepseek-reasoner \
 --temperture 0.0 \
 --max_tokens 8192 \
---system_prompt_type english \
+--system_prompt_type chinese \
 --max_requests_per_minute 1000 \
 --max_tokens_per_minute 1000000000 \
 --cache_dir ./cache \
 --num_proc 4
 ```
 
-Then follow the instructions in the terminal.
+然后跟随终端中的指引操作即可.
 
 
-# Citation
+# 引用
 
-If you use this codebase, or find our work valuable, please cite our repository:
+如果您使用此代码库, 或者认为我们的工作有价值, 请引用我们的仓库:
 
 ```bibtex
 @misc{small-thoughts,
