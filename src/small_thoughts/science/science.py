@@ -6,7 +6,7 @@ import pandas as pd
 
 from ..utils.decontaminate import decontaminate
 from ..utils.deduplicate import deduplicate
-from ..science.reason import reason
+from ..utils.reason import reason
 
 
 def subsample(dataset, num_samples_per_subtopic):
