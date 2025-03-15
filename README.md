@@ -80,6 +80,13 @@ You can get the following dataset under your huggingface repository by running w
 If you need the complete distilled dataset, please remove the `--try_run` parameter.
 
 
+# Related Projects
+
+- [Openthoughts](https://github.com/open-thoughts/open-thoughts)
+- [DeepSeek R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)
+- [Curator](https://github.com/bespokelabsai/curator)
+
+
 # Citation
 
 If you use this codebase, or find our work valuable, please cite our repository:

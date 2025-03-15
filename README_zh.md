@@ -79,6 +79,14 @@ python src/small_thoughts/generation.py \
 
 如果您需要完整的蒸馏数据集, 请移除 `--try_run` 参数.
 
+
+# 相关项目
+
+- [Openthoughts](https://github.com/open-thoughts/open-thoughts)
+- [DeepSeek R1](https://huggingface.co/deepseek-ai/DeepSeek-R1)
+- [Curator](https://github.com/bespokelabsai/curator)
+
+
 # 引用
 
 如果您使用此代码库, 或者认为我们的工作有价值, 请引用我们的仓库:
