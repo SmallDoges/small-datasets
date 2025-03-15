@@ -93,9 +93,10 @@ If you use this codebase, or find our work valuable, please cite our repository:
 
 ```bibtex
 @misc{small-thoughts,
-  author = {Small Doges Team and Jingze, Shi and Yifan, Wu and Bingheng, Wu},
+  author = {Jingze, Shi and Yifan, Wu and Bingheng, Wu and Yuyu, Luo},
   title = {Small Thoughts},
   year = {2025},
   month = {march},
+  url = {https://github.com/SmallDoges/small-thoughts}
 }
 ```
