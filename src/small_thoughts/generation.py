@@ -5,17 +5,20 @@ import subprocess
 
 from argparse import ArgumentParser
 
-from small_thoughts.science import science_main
-from small_thoughts.puzzle import puzzle_main
-from small_thoughts.maths import math_main
-from small_thoughts.code import code_main
+from small_thoughts.reasoning.science import science_main
+from small_thoughts.reasoning.puzzle import puzzle_main
+from small_thoughts.reasoning.maths import math_main
+from small_thoughts.reasoning.code import code_main
 from small_thoughts.utils.mix import mix_subsets
+
+from small_thoughts.translation.smoltalk import smoltalk_main
 
 logger = logging.getLogger(__name__)
 
 
 def main():
     parser = ArgumentParser()
+    parser.add_argument("--task", type=str, default="reasoning")
     parser.add_argument("--try_run", action="store_true", default=True)
     parser.add_argument("--base_url", type=str, default="https://api.deepseek.com")
     parser.add_argument("--model_name", type=str, default="deepseek-reasoner")
@@ -49,14 +52,19 @@ def main():
         if "DEEPSEEK_API_KEY" not in os.environ:
             os.environ["DEEPSEEK_API_KEY"] = input("Please enter your DeepSeek API Key: ")
 
-    # generate datasets
-    science_main(**args)
-    puzzle_main(**args)
-    math_main(**args)
-    code_main(**args)
+    if args["task"] == "reasoning":
+        # generate reasoning datasets
+        science_main(**args)
+        puzzle_main(**args)
+        math_main(**args)
+        code_main(**args)
 
-    # mix datasets
-    mix_subsets(os.environ["HF_ORG"], ["science", "puzzle", "math", "code"], **args)
+        # mix reasoning datasets
+        mix_subsets(os.environ["HF_ORG"], ["science", "puzzle", "math", "code"], **args)
+    elif args["task"] == "translation":
+        # generate translation datasets
+        smoltalk_main(**args)
+
 
 
 if __name__ == "__main__":
