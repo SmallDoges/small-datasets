@@ -22,6 +22,7 @@ def main(
     # load and process the dataset
     ds = load_dataset(
         "HuggingFaceTB/smoltalk",
+        "all",
         split="train",
         cache_dir=cache_dir,
     )
@@ -75,8 +76,8 @@ def main(
     result_data = {"messages": []}
     for i in range(len(user_translated_ds)):
         message_pair = [
-            {"content": user_translated_ds[i]["content"], "role": "user"},
-            {"content": assistant_translated_ds[i]["content"], "role": "assistant"}
+            {"content": user_translated_ds[i]["translated_content"], "role": "user"},
+            {"content": assistant_translated_ds[i]["translated_content"], "role": "assistant"}
         ]
         result_data["messages"].append(message_pair)
     

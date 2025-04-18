@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument("--task", type=str, default="reasoning")
+    parser.add_argument("--task", type=str, default="reasoning", choices=["reasoning", "translation"])
     parser.add_argument("--try_run", action="store_true", default=True)
     parser.add_argument("--base_url", type=str, default="https://api.deepseek.com")
     parser.add_argument("--model_name", type=str, default="deepseek-reasoner")
