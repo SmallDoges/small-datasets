@@ -59,6 +59,7 @@ pip install .
 
 ```bash
 python src/small_thoughts/generation.py \
+--task reasoning \
 --try_run \
 --base_url https://api.deepseek.com \
 --model_name deepseek-reasoner \
