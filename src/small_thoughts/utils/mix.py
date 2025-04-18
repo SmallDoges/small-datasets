@@ -2,7 +2,7 @@ import re
 
 from datasets import Dataset, concatenate_datasets, load_dataset
 
-from ..utils.prompt import MIX_PROMPT
+from ..utils.prompt import REASONING_PROMPT
 
 
 def process_map(example, system_prompt_type="english"):
@@ -17,7 +17,7 @@ def process_map(example, system_prompt_type="english"):
         {"role": "assistant", "content": deepseek_solution},
     ]
     return {
-        "system_prompt": MIX_PROMPT[system_prompt_type],
+        "system_prompt": REASONING_PROMPT[system_prompt_type],
         "problem": problem,
         "solution": solution.replace("\n**Solution:**", "**Solution:**"),
         "messages": messages,
