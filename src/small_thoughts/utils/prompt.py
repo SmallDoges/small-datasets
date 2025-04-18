@@ -73,7 +73,7 @@ The solution section should maintain logical, accurate, and concise expression, 
 <|end_of_solution|>
 
 Note: You must first assess the problem complexity, choose an appropriate thinking framework, and strictly follow the selected format in your response.
-"""
+""".strip()
 
 CHINESE_SYSTEM_PROMPT = r"""
 作为一名助手, 你需要在提供最终解决方案前, 先评估问题复杂度并采用适当的思考框架进行分析. 请将回答结构化为两部分: 思考和解决方案.
@@ -149,7 +149,7 @@ CHINESE_SYSTEM_PROMPT = r"""
 <|end_of_solution|>
 
 注意: 你必须首先评估问题复杂度, 选择合适的思考框架, 并严格遵循选定的格式使用中文进行回答. 
-"""
+""".strip()
 
 ENGLISH_MIX_PROMPT = r"""
 As an assistant, you need to first assess the complexity of the problem and adopt an appropriate thinking framework before providing the final solution. Structure your response into two main sections: Thought and Solution.
@@ -225,7 +225,7 @@ The solution section should maintain logical, accurate, and concise expression, 
 <|end_of_solution|>
 
 Note: You must first assess the problem complexity, choose an appropriate thinking framework, and strictly follow the selected format in your response.
-"""
+""".strip()
 
 CHINESE_MIX_PROMPT = r"""
 作为一名助手, 你需要在提供最终解决方案前, 先评估问题复杂度并采用适当的思考框架进行分析. 请将回答结构化为两部分: 思考和解决方案.
@@ -301,7 +301,7 @@ CHINESE_MIX_PROMPT = r"""
 <|end_of_solution|>
 
 注意: 你必须首先评估问题复杂度, 选择合适的思考框架, 并严格遵循选定的格式使用中文进行回答. 
-"""
+""".strip()
 
 SYSTEM_PROMPT = {
     "english": ENGLISH_SYSTEM_PROMPT,
