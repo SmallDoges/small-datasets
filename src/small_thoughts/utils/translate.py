@@ -23,6 +23,8 @@ class Translater(curator.LLM):
         return {
             "content": input["content"],
             "translated_content": response["choices"][0]["message"]["content"],
+            "sample_indices": input["sample_indices"],
+            "message_indices": input["message_indices"],
         }
 
 
@@ -30,7 +32,7 @@ def translate(dataset, base_url, model_name, temperture=0.0, max_tokens=8192, sy
     reasoner = Translater(
         model_name=model_name,
         generation_params={"temp": temperture, "max_tokens": max_tokens},
-        backend_params={"base_url": base_url, "max_requests_per_minute": max_requests_per_minute, "max_tokens_per_minute": max_tokens_per_minute, "max_retries": 1, "require_all_responses": False},
+        backend_params={"base_url": base_url, "max_requests_per_minute": max_requests_per_minute, "max_tokens_per_minute": max_tokens_per_minute, "max_retries": 10, "require_all_responses": False},
         system_prompt=TRANSLATION_PROMPT[system_prompt_type],
     )
     return reasoner(dataset)
