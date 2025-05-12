@@ -1,10 +1,4 @@
 <div align="center">
-  <img src="./assets/SmallThoughts.png" alt="samllthoughts" width="60%">
-</div>
-
-<hr>
-
-<div align="center">
 
 [![Discord](https://img.shields.io/badge/Discord-Small%20Doges-7289da?logo=discord&logoColor=white&color=7289da)](https://discord.gg/P2yYH95N)
 [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-FFD21E)](https://huggingface.co/datasets/SmallDoge/SmallThoughts)
