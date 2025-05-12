@@ -5,13 +5,13 @@ import subprocess
 
 from argparse import ArgumentParser
 
-from small_thoughts.reasoning.science import science_main
-from small_thoughts.reasoning.puzzle import puzzle_main
-from small_thoughts.reasoning.maths import math_main
-from small_thoughts.reasoning.code import code_main
-from small_thoughts.utils.mix import mix_subsets
+from small_datasets.reasoning.science import science_main
+from small_datasets.reasoning.puzzle import puzzle_main
+from small_datasets.reasoning.maths import math_main
+from small_datasets.reasoning.code import code_main
+from small_datasets.utils.mix import mix_subsets
 
-from small_thoughts.translation.smoltalk import smoltalk_main
+from small_datasets.translation.smoltalk import smoltalk_main
 
 logger = logging.getLogger(__name__)
 
