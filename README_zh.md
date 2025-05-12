@@ -10,11 +10,11 @@
 [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-FFD21E)](https://huggingface.co/datasets/SmallDoge/SmallThoughts)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
-*小心思, 大进步!*
+*小数据, 大进步!*
 
 ---
 
-*我们的目标是构建从大型推理模型中蒸馏出更精确更简洁数据集的流水线*
+*我们的目标是构建一个数据处理流水线来为语言模型训练的所有阶段提供高质量的数据集*
 
 <h4>
 
@@ -27,12 +27,20 @@
 
 # 新闻
 
+* **[2025-5-12]** 🎉发布了 [SmallTalks](https://huggingface.co/datasets/SmallDoge/SmallTalks) 数据集.
 * **[2025-3-8]** 🎉发布了 [SmallThoughts](https://huggingface.co/datasets/SmallDoge/SmallThoughts) 数据集.
 
 
 # 关于
 
-本项目旨在构建从大型推理模型中蒸馏出更精确更简洁数据集的流水线, 来应对现有的推理轨迹普遍在 32k 序列长度, 导致进行 SFT 和 GRPO 微调时的成本过高的问题.
+本项目旨在构建一个全面的**数据集处理流水线**，为语言模型训练的各个阶段提供高质量的数据集。这包括用于以下目的的数据集：
+
+*   **预训练:** 大规模、多样化的文本语料库。
+*   **指令微调:** 例如 `SmallTalks` 这样的数据集，用于使模型与用户指令对齐。
+*   **推理微调:** 例如 `SmallThoughts` 这样的数据集，用于增强模型的推理能力。
+*   **强化学习:** 用于通过奖励机制进一步优化模型行为的数据集。
+
+我们的目标是通过为每个关键训练阶段提供精心策划的数据来支持开发功能更强大、更稳健的语言模型。
 
 
 # 要求
@@ -49,8 +57,8 @@
 # 安装
 
 ```bash
-git clone https://github.com/SmallDoges/small-thoughts.git
-cd small-thoughts
+git clone https://github.com/SmallDoges/small-datasets.git
+cd small-datasets
 pip install .
 ```
 
@@ -58,7 +66,7 @@ pip install .
 # 使用
 
 ```bash
-python src/small_thoughts/generation.py \
+python src/small_datasets/generation.py \
 --task reasoning \
 --try_run \
 --base_url https://api.deepseek.com \

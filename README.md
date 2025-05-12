@@ -10,11 +10,11 @@
 [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-FFD21E)](https://huggingface.co/datasets/SmallDoge/SmallThoughts)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 
-*Small Thoughts, Big Progress!*
+*Small Datasets, Big Progress!*
 
 ---
 
-*Our goal is to build pipelines for distilling more precise and concise datasets from large reasoning models*
+*Our goal is to build a data processing pipeline that provides high-quality datasets for all stages of language model training*
 
 <h4>
 
@@ -27,12 +27,20 @@ English | [简体中文](./README_zh.md)
 
 # News
 
+* **[2025-5-12]** 🎉Released [SmallTalks](https://huggingface.co/datasets/SmallDoge/SmallTalks) dataset.
 * **[2025-3-8]** 🎉Released [SmallThoughts](https://huggingface.co/datasets/SmallDoge/SmallThoughts) dataset.
 
 
 # About
 
-The goal of this project is to build pipelines for distilling more precise and concise datasets from large reasoning models to address the problem that the existing reasoning trajectories are generally 32k sequence length, resulting in high costs when performing SFT and GRPO fine-tuning.
+This project aims to build a comprehensive **dataset processing pipeline** that provides high-quality datasets for all stages of language model training. This includes datasets for:
+
+*   **Pre-training:** Large-scale, diverse text corpora.
+*   **Instruction Fine-tuning:** Datasets like `SmallTalks` to align models with user instructions.
+*   **Reasoning Fine-tuning:** Datasets like `SmallThoughts` to enhance models' reasoning capabilities.
+*   **Reinforcement Learning:** Datasets to further refine model behavior through reward mechanisms.
+
+Our goal is to support the development of more capable and robust language models by providing meticulously curated data for each critical training phase.
 
 
 # Requirements
@@ -49,8 +57,8 @@ The goal of this project is to build pipelines for distilling more precise and c
 # Installation
 
 ```bash
-git clone https://github.com/SmallDoges/small-thoughts.git
-cd small-thoughts
+git clone https://github.com/SmallDoges/small-datasets.git
+cd small-datasets
 pip install .
 ```
 
@@ -58,7 +66,7 @@ pip install .
 # Usage
 
 ```bash
-python src/small_thoughts/generation.py \
+python src/small_datasets/generation.py \
 --task reasoning \
 --try_run \
 --base_url https://api.deepseek.com \
