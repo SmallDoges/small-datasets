@@ -65,7 +65,7 @@ python src/small_datasets/generation.py \
 --try_run \
 --base_url https://api.deepseek.com \
 --model_name deepseek-reasoner \
---temperture 0.0 \
+--temperature 0.0 \
 --max_tokens 8192 \
 --system_prompt_type chinese \
 --max_requests_per_minute 1000 \

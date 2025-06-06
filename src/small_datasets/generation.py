@@ -22,7 +22,7 @@ def main():
     parser.add_argument("--try_run", action="store_true", default=True)
     parser.add_argument("--base_url", type=str, default="https://api.deepseek.com")
     parser.add_argument("--model_name", type=str, default="deepseek-reasoner")
-    parser.add_argument("--temperture", type=float, default=0.0)
+    parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--max_tokens", type=int, default=8192)
     parser.add_argument("--system_prompt_type", type=str, default="english")
     parser.add_argument("--max_requests_per_minute", type=int, default=1_000)

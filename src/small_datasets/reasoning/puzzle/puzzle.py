@@ -21,7 +21,7 @@ def main(
     try_run: bool = False,
     base_url: str = "https://api.deepseek.com",
     model_name: str = "deepseek-reasoner",
-    temperture: float = 0.0,
+    temperature: float = 0.0,
     max_tokens: int = 8192,
     system_prompt_type: str = "english",
     max_requests_per_minute: int = 1_000,
@@ -54,7 +54,7 @@ def main(
         dataset=ds,
         base_url=base_url,
         model_name=model_name,
-        temperture=temperture,
+        temperature=temperature,
         max_tokens=max_tokens,
         system_prompt_type=system_prompt_type,
         max_requests_per_minute=max_requests_per_minute,
@@ -65,7 +65,7 @@ def main(
         print("======== PUZZLE REASONING DATASET CREATED ========")
         print(ds)
         print(ds[0])
-        ("===================================================")
+        print("===================================================")
 
     # push to hub
     ds.push_to_hub(f"{os.environ.get('HF_ORG')}/small-thoughts-puzzle{'-try-run' if try_run else ''}")
